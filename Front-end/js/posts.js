@@ -53,9 +53,9 @@ const displayPosts = (posts, showDeleteBtn) => {
           card.append(deleteBtn);
           deleteBtn.addEventListener("click", async () => {
             document.querySelector("main").innerHTML = null;
-            deletePost(deleteBtn._id);
+            await deletePost(deleteBtn._id);
             checkItemState(post, cardId);
-            // await getAndDisplayPosts();
+            await getAndDisplayPosts();
           });
         }
       });
